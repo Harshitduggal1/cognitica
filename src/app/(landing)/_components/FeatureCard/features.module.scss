@@ -1,0 +1,45 @@
+// Header
+@keyframes navbarMenu {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@tailwind base;
+@tailwind utilities;
+
+html {
+    body {
+        .navbarMenu {
+            opacity: 0;
+            animation: navbarMenu 0.1s ease forwards;
+        }
+
+        .app {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+        }
+
+        // Scroll-bar
+        &::-webkit-scrollbar {
+            background-color: #fff;
+            width: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(#ccc, 1);
+            border-radius: 10px;
+            border: 2px solid #fff;
+        }
+    }
+
+    .features {
+        .container {
+            width: min(100% - 40px, 1120px);
+            margin-inline: auto;
+        }
+    }
+}

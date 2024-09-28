@@ -1,0 +1,293 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: black;
+  background: white;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.spin-slow {
+  animation: spin 30s linear infinite; /* Adjust the time for the speed of the spin */
+}
+.font-style {
+  background: #fec8eb;
+  padding: 0px 5px;
+}
+.benefit-cover {
+  background-image: url('/banner1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.input {
+  width: 100%;
+  background: transparent;
+  padding: 5px;
+  outline: none;
+}
+.jswdLm .blockbuilder-branding{
+  display: none!important;
+}
+.custom-box-shadow-text {
+  position: relative;
+  z-index: 10;
+}
+
+.custom-box-shadow-2, .custom-box-shadow-1 {
+  transition: transform 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.custom-box-shadow-2:hover, .custom-box-shadow-1:hover {
+  transform: scale(1.02); /* subtle hover effect */
+}
+.button-container {
+  display: inline-block;
+  position: relative;
+  width: max-content;
+}
+
+.button-main {
+  position: relative;
+  z-index: 10;
+  padding: 20px 40px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.button-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translate(0, 0);
+}
+
+.button-layer:nth-child(2) {
+  z-index: 9;
+  transform: translate(-4px, -4px);
+}
+
+.button-layer:nth-child(3) {
+  z-index: 8;
+  transform: translate(-8px, -8px);
+}
+
+.button-container:hover .button-layer {
+  opacity: 1;
+}
+
+.button-container:hover .button-main {
+  transform: translate(-14px, -14px);
+}
+
+.button-container:hover .button-layer:nth-child(2) {
+  transform: translate(-7px, -7px);
+}
+
+.button-container:hover .button-layer:nth-child(3) {
+  transform: translate(-20px, -20px);
+}
+
+
+.button-container1 {
+  display: inline-block;
+  position: relative;
+  width: max-content;
+}
+
+.button-main1 {
+  position: relative;
+  z-index: 10;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.button-layer1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 88%;
+  height: 100%;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translate(0, 0);
+}
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .button-layer1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+}
+.button-layer1:nth-child(2) {
+  z-index: 9;
+  transform: translate(-4px, -4px);
+}
+
+.button-layer1:nth-child(3) {
+  z-index: 8;
+  transform: translate(-8px, -8px);
+}
+
+.button-container1:hover .button-layer1 {
+  opacity: 1;
+}
+
+.button-container1:hover .button-main1 {
+  transform: translate(-14px, -14px);
+}
+
+.button-container1:hover .button-layer1:nth-child(2) {
+  transform: translate(-7px, -7px);
+}
+
+.button-container1:hover .button-layer1:nth-child(3) {
+  transform: translate(-20px, -20px);
+}
+
+
+.button-container2 {
+  display: inline-block;
+  position: relative;
+  width: max-content;
+}
+
+.button-main2 {
+  position: relative;
+  z-index: 10;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.button-layer2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translate(0, 0);
+}
+
+.button-layer2:nth-child(2) {
+  z-index: 9;
+  transform: translate(-4px, -4px);
+}
+
+.button-layer2:nth-child(3) {
+  z-index: 8;
+  transform: translate(-8px, -8px);
+}
+
+.button-container2:hover .button-layer2 {
+  opacity: 1;
+}
+
+.button-container2:hover .button-main2 {
+  transform: translate(-14px, -14px);
+}
+
+.button-container2:hover .button-layer2:nth-child(2) {
+  transform: translate(-7px, -7px);
+}
+
+.button-container2:hover .button-layer2:nth-child(3) {
+  transform: translate(-12px, 12px);
+}
+
+.button-container3 {
+  display: inline-block;
+  position: relative;
+  width: max-content;
+
+}
+
+.button-main3 {
+  position: relative;
+  z-index: 10;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.button-layer3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translate(0, 0);
+}
+
+.button-layer3:nth-child(2) {
+  z-index: 9;
+  transform: translate(-4px, -4px);
+}
+
+.button-layer3:nth-child(3) {
+  z-index: 8;
+  transform: translate(-8px, -8px);
+}
+
+.button-container3:hover .button-layer3 {
+  opacity: 1;
+}
+
+.button-container3:hover .button-main3 {
+  transform: translate(-14px, -14px);
+}
+
+.button-container3:hover .button-layer3:nth-child(2) {
+  transform: translate(-7px, -7px);
+}
+
+.button-container3:hover .button-layer3:nth-child(3) {
+  transform: translate(-12px, 12px);
+}
